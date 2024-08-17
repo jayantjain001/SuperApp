@@ -13,13 +13,15 @@ import org.springframework.data.redis.serializer.GenericToStringSerializer;
 @Configuration
 public class RedisSentinelConfig {
 
+    /** min of 3 sentinel and 3 redis nodes are used in prod
+     */
     @Bean
     public RedisConnectionFactory redisConnectionFactory() {
         RedisSentinelConfiguration sentinelConfig = new RedisSentinelConfiguration()
-                .master(RedisConstants.MY_MASTER)                // The name of the master node as configured in Sentinel
-                .sentinel(RedisConstants.LOCALHOST, 26379) // Sentinel host and port
-                .sentinel(RedisConstants.LOCALHOST, 26380) // Another Sentinel host and port if applicable
-                .sentinel(RedisConstants.LOCALHOST, 26381); // Another Sentinel host and port if applicable
+                .master(RedisConstants.MY_MASTER)
+                .sentinel(RedisConstants.LOCALHOST, 26379);
+              /*  .sentinel(RedisConstants.LOCALHOST, 26380)
+                .sentinel(RedisConstants.LOCALHOST, 26381); */
 
         return new JedisConnectionFactory(sentinelConfig);
     }

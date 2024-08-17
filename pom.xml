@@ -63,6 +63,7 @@
 		<dependency>  <!-->  Kafka producer-consumer  dependency   <-->
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
+			<version>3.2.0</version>
 		</dependency>
 
 		<dependency> <!-->  Auto Restart of SpringBoot app and live reloading for web clients like browsers   <-->
@@ -88,11 +89,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.kafka</groupId>
-			<artifactId>spring-kafka-test</artifactId>
-			<scope>test</scope>
-		</dependency>
 
 	</dependencies>
 
