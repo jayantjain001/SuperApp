@@ -40,6 +40,23 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
+
+		<dependency>  <!--> distributed log tracing for debugging in multi-threaded env replacing Spring Cloud Sleuth for Spring Boot 3 <-->
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-tracing</artifactId>
+		</dependency>
+
+		<dependency>  <!-->    we need one of the supported tracers (currently OpenZipkin Brave or OpenTelemetry) for tracing requests .  We are adding brave currently <-->
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-tracing-bridge-brave</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-tracing-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 		<dependency> <!-->  Redis dependency   <-->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
@@ -55,10 +72,7 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>io.micrometer</groupId>
-			<artifactId>micrometer-tracing-bridge-brave</artifactId>
-		</dependency>
+
 
 		<dependency>  <!-->  Kafka producer-consumer  dependency   <-->
 			<groupId>org.springframework.kafka</groupId>
