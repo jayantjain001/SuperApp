@@ -20,4 +20,6 @@ public class RestExceptionHandlerTestController {
         exceptionHandlerTestService.func();
         return "request processed!";
     }
+
+
 }

@@ -1,4 +1,4 @@
-package com.dev.superapp.config.redis;
+package com.dev.superapp.config.datasource.redis;
 
 
 import com.dev.superapp.constants.RedisConstants;
