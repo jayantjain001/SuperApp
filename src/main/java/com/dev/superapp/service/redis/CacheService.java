@@ -1,17 +1,23 @@
 package com.dev.superapp.service.redis;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
+import java.time.Duration;
+
 @Component
+@RequiredArgsConstructor
 public class CacheService {
 
-    @Autowired
-    private RedisTemplate<String, Object> redisTemplate;
+    private final RedisTemplate<String, Object> redisTemplate;
 
     public void saveValue(String key, String value) {
         redisTemplate.opsForValue().set(key, value);
+    }
+
+    public void saveValueWithExpiryTimeInMinutes(String key, String value, int minutes) {
+        redisTemplate.opsForValue().set(key, value,Duration.ofMinutes(minutes));
     }
 
     public String getValue(String key) {
@@ -21,7 +27,6 @@ public class CacheService {
     public void deleteValue(String key) {
         redisTemplate.delete(key);
     }
-
 
 
 }

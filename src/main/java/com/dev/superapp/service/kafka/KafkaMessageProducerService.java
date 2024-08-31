@@ -1,5 +1,6 @@
 package com.dev.superapp.service.kafka;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -10,10 +11,11 @@ import java.util.concurrent.CompletableFuture;
 
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class KafkaMessageProducerService {
 
-    @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
+
+    private final KafkaTemplate<String, String> kafkaTemplate;
 
 
     // @todo if logs are coming properly for Slf4J

@@ -20,8 +20,7 @@ public class RedisSentinelConfig {
         RedisSentinelConfiguration sentinelConfig = new RedisSentinelConfiguration()
                 .master(RedisConstants.MY_MASTER)
                 .sentinel(RedisConstants.LOCALHOST, 26379);
-              /*  .sentinel(RedisConstants.LOCALHOST, 26380)
-                .sentinel(RedisConstants.LOCALHOST, 26381); */
+              //  .sentinel(RedisConstants.LOCALHOST, 26380)      at least a total of 3 should be there in prod
 
         return new JedisConnectionFactory(sentinelConfig);
     }
