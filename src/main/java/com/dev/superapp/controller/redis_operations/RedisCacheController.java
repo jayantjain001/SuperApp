@@ -1,4 +1,4 @@
-package com.dev.superapp.controller;
+package com.dev.superapp.controller.redis_operations;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;

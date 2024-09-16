@@ -1,4 +1,4 @@
-package com.dev.superapp.controller;
+package com.dev.superapp.controller.encryption256Bit;
 
 import com.dev.superapp.util.AESEncryptionUtil;
 import org.springframework.web.bind.annotation.*;

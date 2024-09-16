@@ -1,6 +1,6 @@
-package com.dev.superapp.controller;
+package com.dev.superapp.controller.rest_controller_advice;
 
-import com.dev.superapp.service.ExceptionHandlerTestService;
+import com.dev.superapp.service.exception_handler.ExceptionHandlerTestService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

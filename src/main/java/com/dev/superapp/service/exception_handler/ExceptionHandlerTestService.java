@@ -1,4 +1,4 @@
-package com.dev.superapp.service;
+package com.dev.superapp.service.exception_handler;
 
 import org.apache.kafka.common.errors.InvalidRequestException;
 import org.springframework.stereotype.Service;

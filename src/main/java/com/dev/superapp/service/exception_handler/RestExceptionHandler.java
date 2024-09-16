@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 
 /***
- * To handles all exceptions gracefully always use RestControllerAdvice , so that no shit pops up on your UI :)
+ * To handles all exceptions gracefully always use restControllerAdvice , so that no shit pops up on your UI :)
  */
 @RestControllerAdvice     // ControllerAdvice +  @ResponseBody
 public class RestExceptionHandler {
