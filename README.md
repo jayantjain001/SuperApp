@@ -3,6 +3,12 @@
 Just making this to incorporate all Spring boot and related infra learnings into this app
 
 
+# DB Pool config
+**hikari Connection Pool** :  https://github.com/brettwooldridge/HikariCP
+
+
+
+
 # JPA 
 
 **@GeneratedValue(strategy= GenerationType.IDENTITY)**   :  prevents bulk insertion as for every new entry jpa requires to know last created id from dataSource
