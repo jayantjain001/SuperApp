@@ -3,6 +3,13 @@
 Just making this to incorporate all Spring boot and related infra learnings into this app
 
 
+# JPA 
+
+**@GeneratedValue(strategy= GenerationType.IDENTITY)**   :  prevents bulk insertion as for every new entry jpa requires to know last created id from dataSource
+hence even saveAll doesn't do a bulk insert but is still a bit faster as does all inserts in a single transaction 
+
+**@GeneratedValue(strategy= GenerationType.SEQUENCE)**   :  provides bulk insertion as for every new entry jpa fetches id from its maintained table
+
 
 # Redis Sentinel config
 At least 3 Sentinel with 3 redis nodes are used in prod for safe failovers.
