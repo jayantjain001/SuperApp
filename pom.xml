@@ -35,7 +35,7 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
-		<dependency> <!-->  SQL DB dependency   <-->
+		<dependency> <!-->  SQL DB dependency contains Hikari CP for Connection pool , Hibernate as default JPA provider  <-->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
