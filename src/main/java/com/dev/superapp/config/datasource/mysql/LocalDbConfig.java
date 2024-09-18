@@ -42,7 +42,7 @@ public class LocalDbConfig extends HikariConfig {
 
     @Value("${local-database.maxAliveConnections:10}")
     int maxPoolSizeForDataSource;
-    @Value("${local-database.minIdleConnections:5}")
+    @Value("${local-database.minIdleConnections:10}")
     int minPoolSizeForDataSource;
     @Value("${local-database.db.name:local}")
     String localDB;
